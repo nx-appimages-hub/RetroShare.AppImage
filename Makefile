@@ -4,5 +4,6 @@ DESTINATION="Retroshare.AppImage"
 
 all:
 	echo "Building: $(OUTPUT)"
-	wget -O $(DESTINATION) --continue $(SOURCE)
+	rm -f ./$(DESTINATION)
+	wget -O $(DESTINATION) --continue $(SOURCE)	
 	chmod +x $(DESTINATION)
